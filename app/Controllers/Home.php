@@ -12,6 +12,7 @@ class Home extends BaseController{
         );
         return view('layout/wrapper',$data);
     }
+   
 }
 
 	
