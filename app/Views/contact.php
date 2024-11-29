@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -33,21 +32,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                <div class="main-menu">
-                        
+                    <div class="main-menu">
+
                         <nav class="mobile-menu">
-                        <ul>
+                            <ul>
                                 <li><a href="<?= base_url('site/acceuil') ?>">Home</a></li>
                                 <li><a href="<?= base_url('site/about') ?>">About us</a></li>
-                               <li>
-                                <div class="logo">
-                            <a href="./index.html">
-                                <img src="<?= base_url() ?>/gym/img/logo.png" alt="">
-                            </a>
-                        </div></li>
+                                <li>
+                                    <div class="logo">
+                                        <a href="./index.html">
+                                            <img src="<?= base_url() ?>/gym/img/logo.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
                                 <li><a href="<?= base_url('site/classes') ?>">Classes</a></li>
                                 <li><a href="<?= base_url('site/contact') ?>">Contact</a></li>
-                                <li class="search-btn search-trigger p-7 bg-primary"> <a href="<?= base_url('auth/register') ?>" class=" text-light "> Sign Up </a></li>
+                                <li class="search-btn search-trigger p-7 bg-primary"> <a
+                                        href="<?= base_url('auth/register') ?>" class=" text-light "> Sign Up </a></li>
                             </ul>
                         </nav>
                         <div id="mobile-menu-wrap"></div>
@@ -57,7 +58,7 @@
         </div>
     </header>
     <!-- Header End -->
-   
+
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-area set-bg" data-setbg="<?= base_url() ?>/gym/img/contact/contact-bg.jpg">
         <div class="container">
@@ -129,14 +130,14 @@
                             <a href="#"><img src="<?= base_url() ?>/gym/img/logo.png" alt=""></a>
                         </div>
                         <div class="footer-menu">
-                        <div class="footer-menu">
-                            <ul>
-                                <li><a href="<?= base_url('site/acceuil') ?>">Home</a></li>
-                                <li><a href="<?= base_url('site/about') ?>">About us</a></li>
-                                <li><a href="<?= base_url('site/classes') ?>">Classes</a></li>
-                                <li><a href="<?= base_url('site/contact') ?>">Contact</a></li>
-                            </ul>
-                        </div>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="<?= base_url('site/acceuil') ?>">Home</a></li>
+                                    <li><a href="<?= base_url('site/about') ?>">About us</a></li>
+                                    <li><a href="<?= base_url('site/classes') ?>">Classes</a></li>
+                                    <li><a href="<?= base_url('site/contact') ?>">Contact</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="subscribe-form">
                             <form action="#">
@@ -144,14 +145,15 @@
                                 <button type="submit">Sign Up</button>
                             </form>
                         </div>
-                       
+
                         <div class="footer-icon-img">
                             <img src="<?= base_url() ?>/gym/img/footer-icon.png" alt="">
                         </div>
                         <div class="copyright">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                     </div>
                 </div>

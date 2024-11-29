@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -33,21 +32,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                <div class="main-menu">
-                        
+                    <div class="main-menu">
+
                         <nav class="mobile-menu">
-                        <ul>
+                            <ul>
                                 <li><a href="<?= base_url('site/acceuil') ?>">Home</a></li>
                                 <li><a href="<?= base_url('site/about') ?>">About us</a></li>
-                               <li>
-                                <div class="logo">
-                            <a href="./index.html">
-                                <img src="<?= base_url() ?>/gym/img/logo.png" alt="">
-                            </a>
-                        </div></li>
+                                <li>
+                                    <div class="logo">
+                                        <a href="./index.html">
+                                            <img src="<?= base_url() ?>/gym/img/logo.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
                                 <li><a href="<?= base_url('site/classes') ?>">Classes</a></li>
                                 <li><a href="<?= base_url('site/contact') ?>">Contact</a></li>
-                                <li class="search-btn search-trigger p-7 bg-primary"> <a href="<?= base_url('auth/register') ?>" class=" text-light "> Sign Up </a></li>
+                                <li class="search-btn search-trigger p-7 bg-primary"> <a
+                                        href="<?= base_url('auth/register') ?>" class=" text-light "> Sign Up </a></li>
                             </ul>
                         </nav>
                         <div id="mobile-menu-wrap"></div>
@@ -91,7 +92,8 @@
                     <div class="about-text">
                         <p class="t-text">Pellentesque dictum nisl in nibh dictum volutpat nec a quam. Vivamus suscipit
                             nisl quis nulla pretium, vitae ornare leoltricies arcu a tellus pellentesque ultrices. Ut
-                            euismod luctus elit id eleifend. Donec semper massa a imperdiet mattis. In vel mattis neque, nec ultricies lectus. Morbi auctor lacus nec hendrerit consectetur. </p>
+                            euismod luctus elit id eleifend. Donec semper massa a imperdiet mattis. In vel mattis neque,
+                            nec ultricies lectus. Morbi auctor lacus nec hendrerit consectetur. </p>
                         <div class="about-features">
                             <div class="about-features-item">
                                 <div class="about-feature-img">
@@ -138,7 +140,11 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="skill-text">
-                        <p>Pellentesque dictum nisl in nibh dictum volutpat nec a quam. Vivamus suscipit nisl quis nulla pretium. Dictum nisl in nibh dictum volutpat nec a quam. Vivamus suscipit nisl quis nulla pretium. Dictum nisl in nibh dictum volutpat nec a quam. Vivamus suscipit nisl quis nulla pretium. Dictum nisl in nibh dictum volutpat nec a quam. Vivamus suscipit nisl quis nulla pretium.</p>
+                        <p>Pellentesque dictum nisl in nibh dictum volutpat nec a quam. Vivamus suscipit nisl quis nulla
+                            pretium. Dictum nisl in nibh dictum volutpat nec a quam. Vivamus suscipit nisl quis nulla
+                            pretium. Dictum nisl in nibh dictum volutpat nec a quam. Vivamus suscipit nisl quis nulla
+                            pretium. Dictum nisl in nibh dictum volutpat nec a quam. Vivamus suscipit nisl quis nulla
+                            pretium.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1">
@@ -223,7 +229,8 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="testimonial-content">
-                        <div class="testimonial-pic set-bg" data-setbg="<?= base_url() ?>/gym/img/testimonial/testimonial-1.png"></div>
+                        <div class="testimonial-pic set-bg"
+                            data-setbg="<?= base_url() ?>/gym/img/testimonial/testimonial-1.png"></div>
                         <div class="testimonial-text">
                             <h4>Megan Smith, <span>Client</span></h4>
                             <p>Arcu a tellus pellentesque ultrices. Ut euismod luctus elit id eleifend. Donec semper
@@ -233,7 +240,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="testimonial-content">
-                        <div class="testimonial-pic set-bg" data-setbg="<?= base_url() ?>/gym/img/testimonial/testimonial-2.png"></div>
+                        <div class="testimonial-pic set-bg"
+                            data-setbg="<?= base_url() ?>/gym/img/testimonial/testimonial-2.png"></div>
                         <div class="testimonial-text">
                             <h4>Michael Joe, <span>Client</span></h4>
                             <p>Arcu a tellus pellentesque ultrices. Ut euismod luctus elit id eleifend. Donec semper
@@ -293,9 +301,10 @@
                             <img src="<?= base_url() ?>/gym/img/footer-icon.png" alt="">
                         </div>
                         <div class="copyright">
-                           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                     </div>
                 </div>

@@ -3,37 +3,41 @@
 namespace App\Controllers;
 
 
-class Acceuil extends BaseController{
+class Acceuil extends BaseController
+{
 
-    public function index(){
+    public function index()
+    {
         $data = array(
             'title' => 'Acceuil',
-            
+
         );
-        return view('acceuil',$data);
+        return view('acceuil', $data);
     }
-    public function about(){
+    public function about()
+    {
         $data = array(
             'title' => 'About',
-            
+
         );
-        return view('about',$data);
+        return view('about', $data);
     }
-    public function classes(){
+    public function classes()
+    {
         $data = array(
             'title' => 'Classes',
-            
+
         );
-        return view('classes',$data);
+        return view('classes', $data);
     }
-    public function contact(){
+    public function contact()
+    {
         $data = array(
             'title' => 'Contact',
-            
+
         );
-        return view('contact',$data);
+        return view('contact', $data);
     }
 
 }
 
-	

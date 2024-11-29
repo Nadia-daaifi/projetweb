@@ -8,7 +8,7 @@ class ModelAuth extends Model
 {
     protected $table = 'user';
     protected $primaryKey = 'id_user';
-    protected $allowedFields = ['username', 'email', 'phone_num', 'password', 'level'];
+    protected $allowedFields = ['username', 'email', 'phone_num', 'password', 'level','photo'];
 
     public function save_register($data)
     {
@@ -18,6 +18,6 @@ class ModelAuth extends Model
     {
         return $this->where('email', $email)->first(); // Récupère l'utilisateur par email
     }
-    
-    
+
+
 }

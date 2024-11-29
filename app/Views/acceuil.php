@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -33,21 +32,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                <div class="main-menu">
-                        
+                    <div class="main-menu">
+
                         <nav class="mobile-menu">
-                        <ul>
+                            <ul>
                                 <li><a href="<?= base_url('site/acceuil') ?>">Home</a></li>
                                 <li><a href="<?= base_url('site/about') ?>">About us</a></li>
-                               <li>
-                                <div class="logo">
-                            <a href="./index.html">
-                                <img src="<?= base_url() ?>/gym/img/logo.png" alt="">
-                            </a>
-                        </div></li>
+                                <li>
+                                    <div class="logo">
+                                        <a href="./index.html">
+                                            <img src="<?= base_url() ?>/gym/img/logo.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
                                 <li><a href="<?= base_url('site/classes') ?>">Classes</a></li>
                                 <li><a href="<?= base_url('site/contact') ?>">Contact</a></li>
-                                <li class="search-btn search-trigger p-7 bg-primary"> <a href="<?= base_url('auth/register') ?>" class=" text-light "> Sign Up </a></li>
+                                <li class="search-btn search-trigger p-7 bg-primary"> <a
+                                        href="<?= base_url('auth/register') ?>" class=" text-light "> Sign Up </a></li>
                             </ul>
                         </nav>
                         <div id="mobile-menu-wrap"></div>
@@ -57,22 +58,25 @@
         </div>
     </header>
     <!-- Header End -->
-   
+
     <!-- Hero Slider Section Begin -->
     <section class="hero-slider">
         <div class="slide-items owl-carousel">
             <div class="single-slide set-bg active" data-setbg="<?= base_url() ?>/gym/img/bg.jpg">
-                <a href="https://www.youtube.com/watch?v=SEVuD_djKrU" class="play-btn pop-up"><i class="fa fa-play"></i></a>
+                <a href="https://www.youtube.com/watch?v=SEVuD_djKrU" class="play-btn pop-up"><i
+                        class="fa fa-play"></i></a>
                 <h1>Be Fit.Top Gym</h1>
                 <a href="#" class="primary-btn">Read More</a>
             </div>
             <div class="single-slide set-bg" data-setbg="<?= base_url() ?>/gym/img/bg-2.jpg">
-                <a href="https://www.youtube.com/watch?v=SEVuD_djKrU" class="play-btn pop-up"><i class="fa fa-play"></i></a>
+                <a href="https://www.youtube.com/watch?v=SEVuD_djKrU" class="play-btn pop-up"><i
+                        class="fa fa-play"></i></a>
                 <h1>Be Fit.Top Trainer</h1>
                 <a href="#" class="primary-btn">Read More</a>
             </div>
             <div class="single-slide set-bg" data-setbg="<?= base_url() ?>/gym/img/bg-3.jpg">
-                <a href="https://www.youtube.com/watch?v=SEVuD_djKrU" class="play-btn pop-up"><i class="fa fa-play"></i></a>
+                <a href="https://www.youtube.com/watch?v=SEVuD_djKrU" class="play-btn pop-up"><i
+                        class="fa fa-play"></i></a>
                 <h1>Be Fit.Top Body</h1>
                 <a href="#" class="primary-btn">Read More</a>
             </div>
@@ -252,12 +256,18 @@
                             <h5>Upcomming Classes</h5>
                         </div>
                         <ul class="classes-time">
-                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Gym Fitness <span>11:00 - 12:00</span></li>
-                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Pilates <span>12:00 - 13:00</span></li>
-                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Spinning <span>13:00 - 14:00</span></li>
-                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Yoga <span>14:00 - 15:00</span></li>
-                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Gym Fitness <span>15:00 - 16:00</span></li>
-                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Pilates <span>16:00 - 17:00</span></li>
+                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Gym Fitness <span>11:00 -
+                                    12:00</span></li>
+                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Pilates <span>12:00 -
+                                    13:00</span></li>
+                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Spinning <span>13:00 -
+                                    14:00</span></li>
+                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Yoga <span>14:00 -
+                                    15:00</span></li>
+                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Gym Fitness <span>15:00 -
+                                    16:00</span></li>
+                            <li><img src="<?= base_url() ?>/gym/img/stopwatch.png" alt=""> Pilates <span>16:00 -
+                                    17:00</span></li>
                         </ul>
                     </div>
                 </div>
@@ -315,12 +325,13 @@
                                 <button type="submit">Sign Up</button>
                             </form>
                         </div>
-                        
+
                         <div class="footer-icon-img">
                             <img src="<?= base_url() ?>/gym/img/footer-icon.png" alt="">
                         </div>
                         <div class="copyright">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved
                         </div>
                     </div>
                 </div>

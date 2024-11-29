@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
+    <title>Quixlab</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/dash/assets/images/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -58,7 +58,7 @@
               Registration successful
               </div><?php } ?>
             <?php
-     echo form_open('auth/save_register');
+     echo form_open('auth/save_register',['enctype' => 'multipart/form-data']);
      ?>
                                 <div class="mt-5 mb-5 login-input">
                                     <div class="form-group">
@@ -69,6 +69,9 @@
                                     </div>
                                     <div class="form-group">
                         <input type="text" class="form-control" name="phone_num"  placeholder="Phone number" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control" name="photo" accept="image/*" required/>
                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control" name="password"  placeholder="Password" required>

@@ -8,13 +8,14 @@
     <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/dash/assets/images/favicon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="<?= base_url() ?>/dash/css/style.css" rel="stylesheet">
-    
+
 </head>
 
 <body class="h-100">
-    
+
     <!--*******************
         Preloader start
     ********************-->
@@ -37,41 +38,46 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                
-                                    <a class="text-center" href="index.html"> <h4>Rosella</h4></a>
-                                    <?php if (session()->getFlashdata('errors')): ?>
-    <div class="alert alert-danger">
-        <ul>
-            <?php foreach (session()->getFlashdata('errors') as $error): ?>
-                <li><?= esc($error) ?></li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-<?php endif; ?>
 
-<?php if (session()->getFlashdata('error')): ?>
-    <div class="alert alert-danger">
-        <?= esc(session()->getFlashdata('error')) ?>
-    </div>
-<?php endif; ?>
-              <?php
-     echo form_open('auth/check_login');
-     ?>
+                                <a class="text-center" href="index.html">
+                                    <h4>Rosella</h4>
+                                </a>
+                                <?php if (session()->getFlashdata('errors')): ?>
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            <?php foreach (session()->getFlashdata('errors') as $error): ?>
+                                                <li><?= esc($error) ?></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (session()->getFlashdata('error')): ?>
+                                    <div class="alert alert-danger">
+                                        <?= esc(session()->getFlashdata('error')) ?>
+                                    </div>
+                                <?php endif; ?>
+                                <?php
+                                echo form_open('auth/check_login');
+                                ?>
                                 <div class="mt-5 mb-5 login-input">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email"  placeholder="Email" required>
+                                        <input type="email" class="form-control" name="email" placeholder="Email"
+                                            required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password"  placeholder="Password" required>
+                                        <input type="password" class="form-control" name="password"
+                                            placeholder="Password" required>
                                     </div>
                                     <button type="submit" class="btn login-form__btn submit w-100">Sign in</button>
-             </div>
-             <?php
-       echo form_close('');
-     ?>
-                                    <p class="mt-5 login-form__footer">Dont have account? <a href="<?= base_url('auth/register') ?>" class="text-primary">Sign Up </a> now</p>
-                                    </p>
                                 </div>
+                                <?php
+                                echo form_close('');
+                                ?>
+                                <p class="mt-5 login-form__footer">Dont have account? <a
+                                        href="<?= base_url('auth/register') ?>" class="text-primary">Sign Up </a> now
+                                </p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -79,9 +85,10 @@
             </div>
         </div>
     </div>
-    
+    </div>
 
-    
+
+
 
     <!--**********************************
         Scripts
@@ -92,9 +99,5 @@
     <script src="<?= base_url() ?>/dash/js/gleek.js"></script>
     <script src="<?= base_url() ?>/dash/js/styleSwitcher.js"></script>
 </body>
+
 </html>
-
-
-
-
-
