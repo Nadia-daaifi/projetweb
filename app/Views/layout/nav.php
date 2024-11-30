@@ -16,10 +16,10 @@
             </li>
             <li class="">
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-envelope menu-icon"></i> <span class="nav-text">Email</span>
+                    <i class="icon-envelope menu-icon"></i> <span class="nav-text">Coach</span>
                 </a>
                 <ul aria-expanded="false" class="collapse" style="height: 0px;">
-                    <li><a href="./email-inbox.html">Inbox</a></li>
+                    <li><a href="<?= base_url('/admin/addCoach') ?>">Add</a></li>
                     <li><a href="./email-read.html">Read</a></li>
                     <li><a href="./email-compose.html">Compose</a></li>
                 </ul>

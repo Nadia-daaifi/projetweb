@@ -8,7 +8,7 @@ class ModelAuth extends Model
 {
     protected $table = 'user';
     protected $primaryKey = 'id_user';
-    protected $allowedFields = ['username', 'email', 'phone_num', 'password', 'level','photo'];
+    protected $allowedFields = ['username', 'email', 'phone_num', 'password','photo'];
 
     public function save_register($data)
     {
@@ -16,8 +16,31 @@ class ModelAuth extends Model
     }
     public function login($email)
     {
-        return $this->where('email', $email)->first(); // Récupère l'utilisateur par email
+        // Rechercher dans la table 'admin'
+        $admin = $this->db->table('admin')->where('email', $email)->get()->getRowArray();
+        if ($admin) {
+            $admin['type'] = 'admin'; // Indiquer que c'est un admin
+            return $admin;
+        }
+    
+        // Rechercher dans la table 'user' (clients)
+        $client = $this->db->table('user')->where('email', $email)->get()->getRowArray();
+        if ($client) {
+            $client['type'] = 'client'; // Indiquer que c'est un client
+            return $client;
+        }
+    
+        // Rechercher dans la table 'coach'
+        $coach = $this->db->table('coach')->where('email', $email)->get()->getRowArray();
+        if ($coach) {
+            $coach['type'] = 'coach'; // Indiquer que c'est un coach
+            return $coach;
+        }
+    
+        // Aucun utilisateur trouvé
+        return null;
     }
+    
 
 
 }
