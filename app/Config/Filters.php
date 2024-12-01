@@ -72,7 +72,7 @@ class Filters extends BaseFilters
         'before' => [
             'authfilter' => ['except' =>[
                 'auth', 'auth/*',
-              //  'site', 'site/*',
+               //'site', 'site/*',
             ] ]
             // 'honeypot',
             // 'csrf',
@@ -82,6 +82,7 @@ class Filters extends BaseFilters
             'authfilter' => ['except' =>[
                 'admin', '/admin/*',
                 'site', 'site/*',
+                'coach','/addCoach'
                 
             ] ]
             // 'honeypot',

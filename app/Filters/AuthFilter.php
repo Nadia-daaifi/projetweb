@@ -41,5 +41,7 @@ class AuthFilter implements FilterInterface
                     return redirect()->to(base_url('/'))->with('error', 'Unauthorized access.');
             }
         }
+        return null;
     }
+
 }

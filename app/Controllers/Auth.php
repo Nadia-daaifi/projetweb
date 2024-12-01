@@ -105,14 +105,13 @@ class Auth extends BaseController {
 
             // Message de succès et redirection
             session()->setFlashdata('succes', 'Registration successful');
-            return redirect()->to(base_url('auth/register'));
+            return redirect()->to(base_url('auth/login'));
         } else {
             // Si la validation échoue, retourner les erreurs
             session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
             return redirect()->to(base_url('auth/register'));
         }
     }
-
     public function login()
     {
         $data = array(

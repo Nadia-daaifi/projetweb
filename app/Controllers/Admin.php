@@ -17,8 +17,16 @@ class Admin extends BaseController
     public function addCoach()
     {
         $data = array(
-            'title' => 'Home',
+            'title' => 'Add coach',
             'isi' => 'coach/ajout'
+        );
+        return view('layout/wrapper', $data);
+    }
+    public function cliste()
+    {
+        $data = array(
+            'title' => 'Show choach',
+            'isi' => 'coach/liste'
         );
         return view('layout/wrapper', $data);
     }
