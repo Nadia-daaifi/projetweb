@@ -130,7 +130,6 @@
                             <img src="<?= base_url() ?>/dash/images/users/8.jpg" class="rounded-circle" alt="">
                             <h5 class="mt-3 mb-1">Ana Liem</h5>
                             <p class="m-0">Senior Manager</p>
-                            <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
                         </div>
                     </div>
                 </div>
@@ -142,7 +141,6 @@
                             <img src="<?= base_url() ?>/dash/images/users/5.jpg" class="rounded-circle" alt="">
                             <h5 class="mt-3 mb-1">John Abraham</h5>
                             <p class="m-0">Store Manager</p>
-                            <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
                         </div>
                     </div>
                 </div>
@@ -154,7 +152,6 @@
                             <img src="<?= base_url() ?>/dash/images/users/7.jpg" class="rounded-circle" alt="">
                             <h5 class="mt-3 mb-1">John Doe</h5>
                             <p class="m-0">Sales Man</p>
-                            <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
                         </div>
                     </div>
                 </div>
@@ -166,7 +163,6 @@
                             <img src="<?= base_url() ?>/dash/images/users/1.jpg" class="rounded-circle" alt="">
                             <h5 class="mt-3 mb-1">Mehedi Titas</h5>
                             <p class="m-0">Online Marketer</p>
-                            <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
                         </div>
                     </div>
                 </div>

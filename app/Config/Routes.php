@@ -12,6 +12,7 @@ $routes->get('/site/contact', 'Home::contact');
 $routes->get('/admin', 'Admin::index');
 $routes->get('/admin/addCoach', 'Admin::addCoach');
 $routes->get('/admin/Cliste', 'Admin::cliste');
+$routes->get('/admin/profil', 'Admin::profil');
 $routes->get('auth/register', 'Auth::register'); // Route for the register form
 $routes->get('auth/login', 'Auth::login');
 $routes->get('admin/deleteCoach/(:num)', 'Admin::deleteCoach/$1');

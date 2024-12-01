@@ -20,6 +20,14 @@ class Admin extends BaseController
         );
         return view('layout/wrapper', $data);
     }
+    public function profil()
+    {
+        $data = array(
+            'title' => 'Profil',
+            'isi' => 'profil'
+        );
+        return view('layout/wrapper', $data);
+    }
     public function cliste()
 {
     // Charger le modèle

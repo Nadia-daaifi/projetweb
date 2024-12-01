@@ -180,20 +180,8 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="app-profile.html"><i class="icon-user"></i>
+                                            <a href="<?= base_url('admin/profil') ?>"><i class="icon-user"></i>
                                                 <span>Profile</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="email-inbox.html"><i class="icon-envelope-open"></i>
-                                                <span>Inbox</span>
-                                                <div class="badge gradient-3 badge-pill badge-primary">3</div>
-                                            </a>
-                                        </li>
-
-                                        <hr class="my-2">
-                                        <li>
-                                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock
-                                                    Screen</span></a>
                                         </li>
                                         <li><a href="<?= base_url('auth/logout') ?>"><i class="icon-key"></i>
                                                 <span>Logout</span></a></li>

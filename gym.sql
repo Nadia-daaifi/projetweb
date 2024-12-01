@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 30 nov. 2024 à 19:44
+-- Généré le : dim. 01 déc. 2024 à 22:57
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `username`, `email`, `password`, `photo`) VALUES
-(2, 'nadia', 'admin@admin.com', '$2y$10$KSdZU3kvKfC9WnqMOpbszuiyfbavTYJ.tcNBlUdbGml1RRtiW4qka', '1732989801_44dc703a1c0498ee7616.jpg');
+(2, 'nadia', 'admin@admin.com', '$2y$10$KSdZU3kvKfC9WnqMOpbszuiyfbavTYJ.tcNBlUdbGml1RRtiW4qka', 'admin.jpg');
 
 -- --------------------------------------------------------
 
@@ -54,8 +54,21 @@ CREATE TABLE `coach` (
   `email` varchar(50) DEFAULT NULL,
   `phone_num` varchar(25) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
-  `photo` text DEFAULT NULL
+  `photo` text DEFAULT NULL,
+  `salary` float DEFAULT NULL,
+  `adress` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `coach`
+--
+
+INSERT INTO `coach` (`id_coach`, `username`, `email`, `phone_num`, `password`, `photo`, `salary`, `adress`) VALUES
+(2, 'Ali Radi', 'aliradi@gmail.com', '062345678', '$2y$10$/qHpZumGFXZjufXR9Xj2Oe75dkvmME/egtNCH.XpHd3D6r9tUlzDe', '1733082614_de77633f7dee1bfc75a1.jpg', 3300, 'dakhla, agadir'),
+(3, 'Mido Saidi', 'midosaidi@gmail.com', '078765432', '$2y$10$Dzy7jXLetxj/ayX0yQ.K8./F0LsH4H1HwkosVBgeCYB3Z6rJPH2WK', '1733082673_8d391c33ffbac582bbbe.jpg', 3000, 'salam, Agadir'),
+(4, 'jack dizan', 'jackdizan@gmail.com', '07435624345', '$2y$10$EejSjX3rDR37ydfqrdElZOBecYJXHNI/XlkxrW/FP1JNq7jZAYmJK', '1733082759_09476aba754620cf9cfd.jpg', 4000, 'El houda, agadir'),
+(5, 'lina kamil', 'linakamil@gmail.com', '069834567', '$2y$10$SQB5WNQN4KjjCuo8VQm/zuFql3P6XW5kFOnWS2YaetZlUg4et881O', '1733082831_773c9fe2ca609d27436a.jpg', 3100, 'salam, Agadir'),
+(6, 'salma zaki', 'salmazaki@gmail.com', '07356465', '$2y$10$lokzEIlpJNTw3qqPSRca9OfTgww3vL/eC3AQDDkc6V4f79XI3md4a', '1733083021_a6eaa5d1c0f7783725d1.jpg', 2800, 'El houda, agadir');
 
 -- --------------------------------------------------------
 
@@ -120,7 +133,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT pour la table `coach`
 --
 ALTER TABLE `coach`
-  MODIFY `id_coach` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_coach` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `user`
