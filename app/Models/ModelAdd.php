@@ -14,4 +14,9 @@ class ModelAdd extends Model
     {
         return $this->insert($data);
     }
+    public function getAllCoaches()
+{
+    return $this->findAll();
+}
+
 }

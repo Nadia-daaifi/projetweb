@@ -24,8 +24,7 @@
                         <a href="<?= base_url('/admin/addCoach') ?>">Add</a>
                     </li>
                     <li class="<?= (current_url() == base_url('/admin/Cliste')) ? 'active' : '' ?>">
-                        <a href="<?= base_url('/admin/Cliste') ?>">Read</a></li>
-                    <li><a href="./email-compose.html">Compose</a></li>
+                        <a href="<?= base_url('/admin/Cliste') ?>">view</a></li>
                 </ul>
             </li>
             <li>

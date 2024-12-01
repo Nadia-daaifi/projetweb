@@ -3,7 +3,7 @@ namespace App\Controllers;
 
 use App\Models\ModelAdd;
 
-class Add extends BaseController {
+class Coach extends BaseController {
 
     public function __construct() {
         helper('form');
@@ -115,7 +115,57 @@ class Add extends BaseController {
             return redirect()->to(base_url('/admin/addCoach'))->withInput();
         }
     }
-  
+
+    public function updateCoach($id)
+{
+    $model = new ModelAdd();
+
+    // Validation des données
+    if (
+        $this->validate([
+            'username' => 'required|min_length[3]',
+            'email' => 'required|valid_email',
+            'phone_num' => 'required',
+            'salary' => 'required',
+            'adress' => 'required|min_length[10]',
+        ])
+    ) {
+        // Récupérer le fichier photo si fourni
+        $photo = $this->request->getFile('photo');
+        $coach = $model->find($id);
+        $photoName = $coach['photo']; // Garder la photo existante par défaut
+
+        if ($photo && $photo->isValid() && !$photo->hasMoved()) {
+            // Supprimer l'ancienne photo
+            if ($coach['photo'] !== 'default.jpg') {
+                unlink(ROOTPATH . 'public/img/' . $coach['photo']);
+            }
+
+            // Déplacer la nouvelle photo
+            $photoName = $photo->getRandomName();
+            $photo->move(ROOTPATH . 'public/img', $photoName);
+        }
+
+        // Mettre à jour les données dans la base
+        $data = [
+            'username' => $this->request->getPost('username'),
+            'email' => $this->request->getPost('email'),
+            'phone_num' => $this->request->getPost('phone_num'),
+            'salary' => $this->request->getPost('salary'),
+            'adress' => $this->request->getPost('adress'),
+            'photo' => $photoName,
+        ];
+        $model->update($id, $data);
+
+        // Redirection avec succès
+        session()->setFlashdata('succes', 'Coach successfully updated.');
+        return redirect()->to(base_url('/admin/Cliste'));
+    } else {
+        // Retourner les erreurs
+        session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
+        return redirect()->back()->withInput();
+    }
+}
 
     
  
