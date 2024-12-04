@@ -82,7 +82,7 @@ class Filters extends BaseFilters
             'authfilter' => ['except' =>[
                 'admin', '/admin/*',
                 'site', 'site/*',
-                'coach','/addCoach'
+                'Auth','/addCoach'
                 
             ] ]
             // 'honeypot',

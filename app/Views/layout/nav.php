@@ -15,16 +15,28 @@
                     <i class="icon-envelope menu-icon"></i><span class="nav-text">Email</span>
                 </a>
             </li>
-            <li class="<?= (strpos(current_url(), base_url('/admin/addCoach')) !== false || strpos(current_url(), 'coach') !== false) ? 'active' : '' ?>">
+            <li class="<?= (strpos(current_url(), base_url('/admin/coach/add')) !== false || strpos(current_url(), 'coach') !== false) ? 'active' : '' ?>">
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                     <i class="icon-people menu-icon"></i><span class="nav-text">Coach</span>
                 </a>
                 <ul aria-expanded="false" class="collapse <?= (strpos(current_url(), 'coach') !== false) ? 'show' : '' ?>">
-                    <li class="<?= (current_url() == base_url('/admin/addCoach')) ? 'active' : '' ?>">
-                        <a href="<?= base_url('/admin/addCoach') ?>">Add</a>
+                    <li class="<?= (current_url() == base_url('/admin/coach/add')) ? 'active' : '' ?>">
+                        <a href="<?= base_url('/admin/coach/add') ?>">Add</a>
                     </li>
-                    <li class="<?= (current_url() == base_url('/admin/Cliste')) ? 'active' : '' ?>">
-                        <a href="<?= base_url('/admin/Cliste') ?>">view</a></li>
+                    <li class="<?= (current_url() == base_url('/admin/coach/show')) ? 'active' : '' ?>">
+                        <a href="<?= base_url('/admin/coach/show') ?>">view</a></li>
+                </ul>
+            </li>
+            <li class="<?= (strpos(current_url(), base_url('/admin/client/add')) !== false || strpos(current_url(), 'client') !== false) ? 'active' : '' ?>">
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="icon-people menu-icon"></i><span class="nav-text">Client</span>
+                </a>
+                <ul aria-expanded="false" class="collapse <?= (strpos(current_url(), 'client') !== false) ? 'show' : '' ?>">
+                    <li class="<?= (current_url() == base_url('/admin/client/add')) ? 'active' : '' ?>">
+                        <a href="<?= base_url('/admin/client/add') ?>">Add</a>
+                    </li>
+                    <li class="<?= (current_url() == base_url('/admin/client/show')) ? 'active' : '' ?>">
+                        <a href="<?= base_url('/admin/client/show') ?>">view</a></li>
                 </ul>
             </li>
             <li>
