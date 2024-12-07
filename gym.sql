@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 01 déc. 2024 à 22:57
+-- Généré le : dim. 08 déc. 2024 à 00:18
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -85,7 +85,6 @@ CREATE TABLE `user` (
   `age` int(24) DEFAULT NULL,
   `sexe` varchar(50) DEFAULT NULL,
   `nb_abs` int(24) DEFAULT NULL,
-  `level` int(11) DEFAULT NULL,
   `photo` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -93,9 +92,11 @@ CREATE TABLE `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `email`, `phone_num`, `password`, `age`, `sexe`, `nb_abs`, `level`, `photo`) VALUES
-(6, 'hiba nait', 'hibanait@gmail.com', '0675672237', '$2y$10$XkSJf7hwLP6kLqoDPnRacOo3XlgPkDxSw6stIW5LihHPid4zYNob2', NULL, NULL, NULL, 1, 'admin.jpg'),
-(10, 'nadia123', 'n245y7@gmail.com', '0675672237', '$2y$10$x/YltTTCvV9YVVlrj63CS.8dBiAikuHzaGCSxDerWNlRiD.j6Oocm', NULL, NULL, NULL, NULL, '1732990123_152ed04a41fdf1e4b9a4.png');
+INSERT INTO `user` (`id_user`, `username`, `email`, `phone_num`, `password`, `age`, `sexe`, `nb_abs`, `photo`) VALUES
+(6, 'hiba nait', 'hibanait@gmail.com', '0675672237', '$2y$10$XkSJf7hwLP6kLqoDPnRacOo3XlgPkDxSw6stIW5LihHPid4zYNob2', 26, 'female', NULL, 'admin.jpg'),
+(10, 'nadia123', 'n245y7@gmail.com', '0675672237', '$2y$10$x/YltTTCvV9YVVlrj63CS.8dBiAikuHzaGCSxDerWNlRiD.j6Oocm', NULL, NULL, NULL, '1732990123_152ed04a41fdf1e4b9a4.png'),
+(11, 'karim yazid', 'karimyazid@gmail.com', '0787654323', '$2y$10$XUtA4FaaYcLUfWdKcsINHOmCVN4N1bwj.hWHehwVlJXwtkyyWw/4S', 28, 'male', NULL, '1733608648_220ad654e02e3e2f7159.webp'),
+(12, 'eatwell', 'eatwell@gmail.com', '0675672237', '$2y$10$V5Lc5xr8jCdXetAHkLLOJeJz7OaUfUlQYucfcJ3skgpaG6AZomg/e', 34, 'male', NULL, '1733610165_7917bc5bf201c8d9a5f2.jpg');
 
 --
 -- Index pour les tables déchargées
@@ -139,7 +140,7 @@ ALTER TABLE `coach`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

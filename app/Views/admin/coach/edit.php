@@ -61,7 +61,7 @@
                     </div>
                     <div class="form-group">
                         <label>Photo</label>
-                        <input type="file" class="form-control" name="photo">
+                        <input type="file" accept="image/*" class="form-control" name="photo">
                         <small>Current Photo: <img src="<?= base_url('img/' . $coach['photo']) ?>" alt="Photo"
                                 width="60"></small>
                     </div>

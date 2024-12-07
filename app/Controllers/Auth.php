@@ -79,6 +79,20 @@ class Auth extends BaseController
                         'max_size' => 'The image size must not exceed 2MB.',
                     ]
                 ],
+                'age' => [
+                    'label' => 'Age',
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'You must choose an age.',
+                    ]
+                ],
+                'sexe' => [
+                    'label' => 'Sexe',
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'You must choose your sexe.',
+                    ]
+                ],
             ])
         ) {
             // Si la validation est réussie
@@ -103,7 +117,9 @@ class Auth extends BaseController
                 'email' => $this->request->getPost('email'),
                 'phone_num' => $this->request->getPost('phone_num'),
                 'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT), // Hash du mot de passe
-                'photo' => $photoName // Stocker le nom de la photo
+                'photo' => $photoName, // Stocker le nom de la photo
+                'age'=>$this->request->getPost('age'),
+                'sexe'=>$this->request->getPost('sexe'),
             ];
 
             // Sauvegarder les données dans la base de données
@@ -151,7 +167,7 @@ class Auth extends BaseController
 
                 // Redirection en fonction du rôle
                 if ($user['type'] === 'admin') {
-                    return redirect()->to(base_url('/site/acceuil'));
+                    return redirect()->to(base_url('/admin'));
                 } elseif ($user['type'] === 'client') {
                     return redirect()->to(base_url('/site/acceuil'));
                 } elseif ($user['type'] === 'coach') {

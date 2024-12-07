@@ -59,8 +59,8 @@
                     </div>
                     <div class="form-group">
                         <label>Photo</label>
-                        <input type="file" class="form-control" name="photo">
-                        <small>Current Photo: <img src="<?= base_url('img/' . $client['photo']) ?>" alt="Photo"
+                        <input type="file" class="form-control" accept="image/*" name="photo">
+                        <small>Current Photo: <img src="<?= base_url('img/' . $client['photo']) ?>"  alt="Photo"
                                 width="60"></small>
                     </div>
 

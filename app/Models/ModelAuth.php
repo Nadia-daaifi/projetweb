@@ -8,7 +8,7 @@ class ModelAuth extends Model
 {
     protected $table = 'user';
     protected $primaryKey = 'id_user';
-    protected $allowedFields = ['username', 'email', 'phone_num', 'password','photo'];
+    protected $allowedFields = ['username', 'email', 'phone_num', 'password','photo','age','sexe'];
 
     public function save_register($data)
     {

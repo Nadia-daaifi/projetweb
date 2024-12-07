@@ -6,9 +6,15 @@ class Admin extends BaseController
 {
     public function index()
     {
+        $this->ModelCoach = new \App\Models\ModelCoach();
+
+        // Récupérer les données des coachs
+        $coachs = $this->ModelCoach->findAll();
+        
         $data = array(
             'title' => 'Home',
-            'isi' => 'home'
+            'isi' => 'admin/home',
+            'coachs' => $coachs // Passer les données à la vue
         );
         return view('layout/wrapper', $data);
     }
