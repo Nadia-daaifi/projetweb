@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 08 déc. 2024 à 00:18
+-- Généré le : lun. 09 déc. 2024 à 17:52
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -56,19 +56,20 @@ CREATE TABLE `coach` (
   `password` varchar(255) NOT NULL,
   `photo` text DEFAULT NULL,
   `salary` float DEFAULT NULL,
-  `adress` text DEFAULT NULL
+  `adress` text DEFAULT NULL,
+  `nb_abs` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `coach`
 --
 
-INSERT INTO `coach` (`id_coach`, `username`, `email`, `phone_num`, `password`, `photo`, `salary`, `adress`) VALUES
-(2, 'Ali Radi', 'aliradi@gmail.com', '062345678', '$2y$10$/qHpZumGFXZjufXR9Xj2Oe75dkvmME/egtNCH.XpHd3D6r9tUlzDe', '1733082614_de77633f7dee1bfc75a1.jpg', 3300, 'dakhla, agadir'),
-(3, 'Mido Saidi', 'midosaidi@gmail.com', '078765432', '$2y$10$Dzy7jXLetxj/ayX0yQ.K8./F0LsH4H1HwkosVBgeCYB3Z6rJPH2WK', '1733082673_8d391c33ffbac582bbbe.jpg', 3000, 'salam, Agadir'),
-(4, 'jack dizan', 'jackdizan@gmail.com', '07435624345', '$2y$10$EejSjX3rDR37ydfqrdElZOBecYJXHNI/XlkxrW/FP1JNq7jZAYmJK', '1733082759_09476aba754620cf9cfd.jpg', 4000, 'El houda, agadir'),
-(5, 'lina kamil', 'linakamil@gmail.com', '069834567', '$2y$10$SQB5WNQN4KjjCuo8VQm/zuFql3P6XW5kFOnWS2YaetZlUg4et881O', '1733082831_773c9fe2ca609d27436a.jpg', 3100, 'salam, Agadir'),
-(6, 'salma zaki', 'salmazaki@gmail.com', '07356465', '$2y$10$lokzEIlpJNTw3qqPSRca9OfTgww3vL/eC3AQDDkc6V4f79XI3md4a', '1733083021_a6eaa5d1c0f7783725d1.jpg', 2800, 'El houda, agadir');
+INSERT INTO `coach` (`id_coach`, `username`, `email`, `phone_num`, `password`, `photo`, `salary`, `adress`, `nb_abs`) VALUES
+(2, 'Ali Radi', 'aliradi@gmail.com', '062345678', '$2y$10$/qHpZumGFXZjufXR9Xj2Oe75dkvmME/egtNCH.XpHd3D6r9tUlzDe', '1733082614_de77633f7dee1bfc75a1.jpg', 3300, 'dakhla, agadir', 1),
+(3, 'Mido Saidi', 'midosaidi@gmail.com', '078765432', '$2y$10$Dzy7jXLetxj/ayX0yQ.K8./F0LsH4H1HwkosVBgeCYB3Z6rJPH2WK', '1733082673_8d391c33ffbac582bbbe.jpg', 3000, 'salam, Agadir', 0),
+(4, 'jack dizan', 'jackdizan@gmail.com', '07435624345', '$2y$10$EejSjX3rDR37ydfqrdElZOBecYJXHNI/XlkxrW/FP1JNq7jZAYmJK', '1733082759_09476aba754620cf9cfd.jpg', 4000, 'El houda, agadir', 0),
+(5, 'lina kamil', 'linakamil@gmail.com', '069834567', '$2y$10$SQB5WNQN4KjjCuo8VQm/zuFql3P6XW5kFOnWS2YaetZlUg4et881O', '1733082831_773c9fe2ca609d27436a.jpg', 3100, 'salam, Agadir', 0),
+(6, 'salma zaki', 'salmazaki@gmail.com', '07356465', '$2y$10$lokzEIlpJNTw3qqPSRca9OfTgww3vL/eC3AQDDkc6V4f79XI3md4a', '1733083021_a6eaa5d1c0f7783725d1.jpg', 2800, 'El houda, agadir', 0);
 
 -- --------------------------------------------------------
 
@@ -84,19 +85,19 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   `age` int(24) DEFAULT NULL,
   `sexe` varchar(50) DEFAULT NULL,
-  `nb_abs` int(24) DEFAULT NULL,
-  `photo` text DEFAULT NULL
+  `photo` text DEFAULT NULL,
+  `nb_abs` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `email`, `phone_num`, `password`, `age`, `sexe`, `nb_abs`, `photo`) VALUES
-(6, 'hiba nait', 'hibanait@gmail.com', '0675672237', '$2y$10$XkSJf7hwLP6kLqoDPnRacOo3XlgPkDxSw6stIW5LihHPid4zYNob2', 26, 'female', NULL, 'admin.jpg'),
-(10, 'nadia123', 'n245y7@gmail.com', '0675672237', '$2y$10$x/YltTTCvV9YVVlrj63CS.8dBiAikuHzaGCSxDerWNlRiD.j6Oocm', NULL, NULL, NULL, '1732990123_152ed04a41fdf1e4b9a4.png'),
-(11, 'karim yazid', 'karimyazid@gmail.com', '0787654323', '$2y$10$XUtA4FaaYcLUfWdKcsINHOmCVN4N1bwj.hWHehwVlJXwtkyyWw/4S', 28, 'male', NULL, '1733608648_220ad654e02e3e2f7159.webp'),
-(12, 'eatwell', 'eatwell@gmail.com', '0675672237', '$2y$10$V5Lc5xr8jCdXetAHkLLOJeJz7OaUfUlQYucfcJ3skgpaG6AZomg/e', 34, 'male', NULL, '1733610165_7917bc5bf201c8d9a5f2.jpg');
+INSERT INTO `user` (`id_user`, `username`, `email`, `phone_num`, `password`, `age`, `sexe`, `photo`, `nb_abs`) VALUES
+(6, 'hiba nait', 'hibanait@gmail.com', '0675672237', '$2y$10$XkSJf7hwLP6kLqoDPnRacOo3XlgPkDxSw6stIW5LihHPid4zYNob2', 26, 'female', 'admin.jpg', 1),
+(10, 'nadia123', 'n245y7@gmail.com', '0675672237', '$2y$10$x/YltTTCvV9YVVlrj63CS.8dBiAikuHzaGCSxDerWNlRiD.j6Oocm', NULL, NULL, '1732990123_152ed04a41fdf1e4b9a4.png', 0),
+(11, 'karim yazid', 'karimyazid@gmail.com', '0787654323', '$2y$10$XUtA4FaaYcLUfWdKcsINHOmCVN4N1bwj.hWHehwVlJXwtkyyWw/4S', 28, 'male', '1733608648_220ad654e02e3e2f7159.webp', 1),
+(12, 'eatwell', 'eatwell@gmail.com', '0675672237', '$2y$10$V5Lc5xr8jCdXetAHkLLOJeJz7OaUfUlQYucfcJ3skgpaG6AZomg/e', 34, 'male', '1733610165_7917bc5bf201c8d9a5f2.jpg', 0);
 
 --
 -- Index pour les tables déchargées
