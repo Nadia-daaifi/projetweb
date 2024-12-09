@@ -210,6 +210,80 @@ $data = [
 return view('layout/wrapper', $data);
 }
 
+public function showClasses()
+    {
+        $this->classModel = new \App\Models\ClassModel();
+        $data = [
+            'title' => 'Show Classes',
+            'isi' => 'admin/classes/index',
+            'classes' => $this->classModel->getClasses(),
+        ];
+        return view('layout/wrapper', $data);
+    }
+
+    // Afficher le formulaire pour ajouter une classe
+    public function addClass()
+    {
+       $this->ModelCoach = new \App\Models\ModelCoach();
+        $data = [
+            'title' => 'add Classe',
+            'isi' => 'admin/classes/add',
+            'coachs' => $this->ModelCoach->findAll(),
+        ];
+        return view('layout/wrapper', $data);
+    }
+
+    // Sauvegarder une nouvelle classe
+    public function saveClass()
+    {
+        $this->classModel = new \App\Models\ClassModel();
+        $this->classModel->save([
+            'name' => $this->request->getPost('name'),
+            'description' => $this->request->getPost('description'),
+            'start_time' => $this->request->getPost('start_time'),
+            'end_time' => $this->request->getPost('end_time'),
+            'coach' => $this->request->getPost('coach'),
+        ]);
+        return redirect()->to('/admin/classes')->with('success', 'Class added successfully!');
+    }
+
+    // Afficher le formulaire pour éditer une classe
+    public function editClass($id)
+    {
+        $this->ModelCoach = new \App\Models\ModelCoach();
+        $this->classModel = new \App\Models\ClassModel();
+        $data = [
+            'class' => $this->classModel->find($id),
+            'title' => 'edit Classe',
+            'isi' => 'admin/classes/edit',
+            'coachs' => $this->ModelCoach->findAll(),
+        ];
+        return view('layout/wrapper', $data);
+       
+    }
+
+    // Mettre à jour une classe
+    public function updateClass($id)
+    {
+        $this->classModel = new \App\Models\ClassModel();
+        $this->classModel->update($id, [
+            'name' => $this->request->getPost('name'),
+            'description' => $this->request->getPost('description'),
+            'start_time' => $this->request->getPost('start_time'),
+            'end_time' => $this->request->getPost('end_time'),
+            'coach' => $this->request->getPost('coach'),
+        ]);
+        return redirect()->to('/admin/classes')->with('success', 'Class updated successfully!');
+    }
+
+    // Supprimer une classe
+    public function deleteClass($id)
+    {
+        $this->classModel = new \App\Models\ClassModel();
+        $this->classModel->delete($id);
+        return redirect()->to('/admin/classes')->with('success', 'Class deleted successfully!');
+    }
+
 }
 
 

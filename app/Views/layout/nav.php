@@ -40,20 +40,23 @@
                 </ul>
             </li>
             <li
-                class="<?= (strpos(current_url(), base_url('/admin/classe/add')) !== false || strpos(current_url(), 'classe') !== false) ? 'active' : '' ?>">
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                class="<?= (strpos(current_url(), base_url('/admin/class/add')) !== false || strpos(current_url(), 'class') !== false) ? 'active' : '' ?>">
+                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
                     <i class="icon-list menu-icon"></i><span class="nav-text">Classes</span>
                 </a>
                 <ul aria-expanded="false"
-                    class="collapse <?= (strpos(current_url(), 'classe') !== false) ? 'show' : '' ?>">
-                    <li class="<?= (current_url() == base_url('/admin/classe/add')) ? 'active' : '' ?>">
-                        <a href="<?= base_url('/admin/classe/add') ?>">Add</a>
+                    class="collapse <?= (strpos(current_url(), 'class') !== false) ? 'show' : '' ?>">
+                    <!-- Lien vers l'ajout de classe -->
+                    <li class="<?= (current_url() == base_url('admin/class/add')) ? 'active' : '' ?>">
+                        <a href="<?= base_url('admin/class/add') ?>">Add</a>
                     </li>
-                    <li class="<?= (current_url() == base_url('/admin/classe/show')) ? 'active' : '' ?>">
-                        <a href="<?= base_url('/admin/classe/show') ?>">view</a>
+                    <!-- Lien vers la liste des classes -->
+                    <li class="<?= (current_url() == base_url('admin/classes')) ? 'active' : '' ?>">
+                        <a href="<?= base_url('admin/classes') ?>">View</a>
                     </li>
                 </ul>
             </li>
+
             <li>
                 <a href="<?= base_url('/admin/calender') ?>" aria-expanded="false">
                     <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Calender</span>
@@ -61,7 +64,7 @@
             </li>
             <li class="<?= (strpos(current_url(), 'absence') !== false) ? 'active' : '' ?>">
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-list menu-icon"></i><span class="nav-text">Absence</span>
+                    <i class="icon-check menu-icon"></i><span class="nav-text">Absence</span>
                 </a>
                 <ul aria-expanded="false"
                     class="<?= (strpos(current_url(), 'absence') !== false) ? 'collapse show' : 'collapse' ?>">

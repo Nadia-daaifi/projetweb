@@ -28,8 +28,8 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone Number</th>
-                                        <th>nb abs</th>
-                                        <th style="width: 10px;">Action</th>
+                                        <th>Nb Abs</th>
+                                        <th style="width: 10px;">Absence</th>
                                     </tr>
                                 </thead>
 
@@ -47,8 +47,8 @@
                                                 <td><?= esc($client['nb_abs']) ?></td>
                                                 <td style="width: 10px;"><span>
                                                         <a href="<?= base_url('admin/absence/client/' . $client['id_user']) ?>"
-                                                            data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="fa fa-pencil color-muted m-r-5"></i>
+                                                            data-toggle="tooltip" data-placement="top" title="Mark Absence" class="btn btn-sm btn-primary">
+                                                            <i class="fa fa-check"></i> Mark
                                                         </a>
 
                                                     </span>

@@ -28,8 +28,8 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone Number</th>
-                                        <th>nb abs</th>
-                                        <th style="width: 10px;">Action</th>
+                                        <th>Nb ABS</th>
+                                        <th style="width: 10px;">Absence</th>
                                     </tr>
                                 </thead>
 
@@ -38,8 +38,7 @@
                                         <?php foreach ($coachs as $coach): ?>
                                             <tr>
                                                 <td>
-                                                    <img src="<?= base_url('img/' . $coach['photo']) ?>" alt="Photo"
-                                                        width="50">
+                                                    <img src="<?= base_url('img/' . $coach['photo']) ?>" alt="Photo" width="50">
                                                 </td>
                                                 <td><?= esc($coach['username']) ?></td>
                                                 <td><?= esc($coach['email']) ?></td>
@@ -47,8 +46,8 @@
                                                 <td><?= esc($coach['nb_abs']) ?></td>
                                                 <td style="width: 10px;"><span>
                                                         <a href="<?= base_url('admin/absence/coach/' . $coach['id_coach']) ?>"
-                                                            data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="fa fa-pencil color-muted m-r-5"></i>
+                                                            data-toggle="tooltip" data-placement="top" title="Mark Absence" class="btn btn-sm btn-primary">
+                                                            <i class="fa fa-check"></i> Mark
                                                         </a>
 
                                                     </span>

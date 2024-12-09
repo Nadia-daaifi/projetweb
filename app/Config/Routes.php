@@ -34,6 +34,13 @@ $routes->get('admin/absence/cl', 'Admin::showAbs');
 $routes->get('admin/absence/client/(:num)', 'Admin::markAbsence/$1');
 $routes->get('admin/absence/co', 'Admin::showAbs_coach');
 $routes->get('admin/absence/coach/(:num)', 'Admin::markAbs_coach/$1');
+$routes->get('admin/classes', 'Admin::showClasses');
+$routes->get('admin/class/add', 'Admin::addClass');
+$routes->post('admin/class/save', 'Admin::saveClass');
+$routes->get('admin/class/edit/(:num)', 'Admin::editClass/$1');
+$routes->post('admin/class/update/(:num)', 'Admin::updateClass/$1');
+$routes->get('admin/class/delete/(:num)', 'Admin::deleteClass/$1');
+
 
 
 
