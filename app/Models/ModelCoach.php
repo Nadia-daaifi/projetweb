@@ -8,7 +8,7 @@ class ModelCoach extends Model
 {
     protected $table = 'coach';
     protected $primaryKey = 'id_coach';
-    protected $allowedFields = ['username', 'email', 'phone_num', 'password','photo','salary','adress'];
+    protected $allowedFields = ['username', 'email', 'phone_num', 'password','photo','salary','adress','nb_abs'];
 
     public function add_coach($data)
     {

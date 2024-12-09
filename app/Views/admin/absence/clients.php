@@ -3,7 +3,7 @@
         <div class="col p-md-0">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">Show Client</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Show Clients</a></li>
             </ol>
         </div>
     </div>
@@ -14,7 +14,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Client List</h4>
+                        <h4 class="card-title">Clients List</h4>
                         <?php if (session()->getFlashdata('succes')): ?>
                             <div class="alert alert-success" role="alert">
                                 <?= session()->getFlashdata('succes') ?>
@@ -24,13 +24,11 @@
                             <table class="table table-striped table-bordered zero-configuration">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Photo</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone Number</th>
-                                        <th>Age</th>
-                                        <th>Sexe</th>
-                                        <th>Photo</th>
+                                        <th>nb abs</th>
                                         <th style="width: 10px;">Action</th>
                                     </tr>
                                 </thead>
@@ -39,26 +37,18 @@
                                     <?php if (!empty($clients)): ?>
                                         <?php foreach ($clients as $client): ?>
                                             <tr>
-                                                <td><?= esc($client['id_user']) ?></td>
-                                                <td><?= esc($client['username']) ?></td>
-                                                <td><?= esc($client['email']) ?></td>
-                                                <td><?= esc($client['phone_num']) ?></td>
-                                                <td><?= esc($client['age']) ?></td>
-                                                <td><?= esc($client['sexe']) ?></td>
                                                 <td>
                                                     <img src="<?= base_url('img/' . $client['photo']) ?>" alt="Photo"
                                                         width="50">
                                                 </td>
+                                                <td><?= esc($client['username']) ?></td>
+                                                <td><?= esc($client['email']) ?></td>
+                                                <td><?= esc($client['phone_num']) ?></td>
+                                                <td><?= esc($client['nb_abs']) ?></td>
                                                 <td style="width: 10px;"><span>
-                                                        <a href="<?= base_url('admin/editClient/' . $client['id_user']) ?>"
+                                                        <a href="<?= base_url('admin/absence/client/' . $client['id_user']) ?>"
                                                             data-toggle="tooltip" data-placement="top" title="Edit">
                                                             <i class="fa fa-pencil color-muted m-r-5"></i>
-                                                        </a>
-
-                                                        <a href="<?= base_url('admin/deleteClient/' . $client['id_user']) ?>"
-                                                            data-toggle="tooltip" data-placement="top" title="Delete"
-                                                            onclick="return confirm('Are you sure you want to delete this client?')">
-                                                            <i class="fa fa-close text-danger"></i>
                                                         </a>
 
                                                     </span>

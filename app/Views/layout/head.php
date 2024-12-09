@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/dash/images/favicon.png">
     <!-- Custom Stylesheet -->
     <link href="<?= base_url() ?>/dash/css/style.css" rel="stylesheet">
+    <link href="<?= base_url() ?>/dash/plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet">
      <link href="<?= base_url() ?>/dash/plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>

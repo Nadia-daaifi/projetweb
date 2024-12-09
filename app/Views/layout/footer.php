@@ -44,6 +44,11 @@
 <script src="<?= base_url() ?>/dash/plugins/tables/js/jquery.dataTables.min.js"></script>
     <script src="<?= base_url() ?>/dash/plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
     <script src="<?= base_url() ?>/dash/plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+    <script src="<?= base_url() ?>/dash/plugins/jqueryui/js/jquery-ui.min.js"></script>
+    <script src="<?= base_url() ?>/dash/plugins/moment/moment.min.js"></script>
+    <script src="<?= base_url() ?>/dash/plugins/fullcalendar/js/fullcalendar.min.js"></script>
+    <script src="<?= base_url() ?>/dash/js/plugins-init/fullcalendar-init.js"></script>
+
 
 
 </body>

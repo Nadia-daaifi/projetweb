@@ -26,6 +26,14 @@ class Admin extends BaseController
         );
         return view('layout/wrapper', $data);
     }
+    public function calender()
+    {
+        $data = array(
+            'title' => 'Calender',
+            'isi' => 'admin/calender'
+        );
+        return view('layout/wrapper', $data);
+    }
     public function addCoach()
     {
         $data = array(
@@ -141,5 +149,67 @@ public function deleteClient($id)
     session()->setFlashdata('succes', 'Client successfully deleted');
     return redirect()->to(base_url('/admin/client/show'));
 }
+
+public function markAbsence($id)
+{
+    $this->ModelClient = new \App\Models\ModelClient();
+    // Supprimer le client
+    $this->ModelClient->set('nb_abs', 'nb_abs + 1', false) // Incrémenter sans écraser la valeur actuelle
+    ->where('id_user', $id)
+    ->update();
+    // Ajouter un message de succès
+    session()->setFlashdata('succes', 'Absence marked successfully.');
+    return redirect()->back();
 }
+public function showAbs()
+{
+// Charger le modèle
+$this->ModelClient = new \App\Models\ModelClient();
+
+// Récupérer les données des clients
+$clients = $this->ModelClient->findAll();
+
+// Préparer les données pour la vue
+$data = [
+    'title' => 'Show Client',
+    'isi' => 'admin/absence/clients',
+    'clients' => $clients // Passer les données à la vue
+];
+
+// Charger la vue
+return view('layout/wrapper', $data);
+}
+
+public function markAbs_coach($id)
+{
+    $this->ModelCoach = new \App\Models\ModelCoach();
+    // Supprimer le coach
+    $this->ModelCoach->set('nb_abs', 'nb_abs + 1', false) // Incrémenter sans écraser la valeur actuelle
+    ->where('id_coach', $id)
+    ->update();
+    // Ajouter un message de succès
+    session()->setFlashdata('succes', 'Absence marked successfully.');
+    return redirect()->back();
+}
+public function showAbs_coach()
+{
+// Charger le modèle
+$this->ModelCoach = new \App\Models\ModelCoach();
+
+// Récupérer les données des coachs
+$coachs = $this->ModelCoach->findAll();
+
+// Préparer les données pour la vue
+$data = [
+    'title' => 'Show Coach',
+    'isi' => 'admin/absence/coachs',
+    'coachs' => $coachs // Passer les données à la vue
+];
+
+// Charger la vue
+return view('layout/wrapper', $data);
+}
+
+}
+
 
