@@ -24,13 +24,12 @@
                             <table class="table table-striped table-bordered zero-configuration">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Photo</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone Number</th>
                                         <th>Address</th>
                                         <th>Salary</th>
-                                        <th>Photo</th>
                                         <th style="width: 10px;">Action</th>
                                     </tr>
                                 </thead>
@@ -39,15 +38,14 @@
                                     <?php if (!empty($coachs)): ?>
                                         <?php foreach ($coachs as $coach): ?>
                                             <tr>
-                                                <td><?= esc($coach['id_coach']) ?></td>
+                                                <td>
+                                                    <img src="<?= base_url('img/' . $coach['photo']) ?>" alt="Photo" width="60">
+                                                </td>
                                                 <td><?= esc($coach['username']) ?></td>
                                                 <td><?= esc($coach['email']) ?></td>
                                                 <td><?= esc($coach['phone_num']) ?></td>
                                                 <td><?= esc($coach['adress']) ?></td>
                                                 <td><?= esc($coach['salary']) ?></td>
-                                                <td>
-                                                    <img src="<?= base_url('img/' . $coach['photo']) ?>" alt="Photo" width="50">
-                                                </td>
                                                 <td style="width: 10px;"><span>
                                                         <a href="<?= base_url('admin/editCoach/' . $coach['id_coach']) ?>"
                                                             data-toggle="tooltip" data-placement="top" title="Edit">

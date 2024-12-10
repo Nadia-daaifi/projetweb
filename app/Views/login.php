@@ -5,13 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
+    <title>Fitheal</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/dash/assets/images/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="<?= base_url() ?>/dash/css/style.css" rel="stylesheet">
-
 </head>
 
 <body class="h-100">
@@ -40,7 +39,7 @@
                             <div class="card-body pt-5">
 
                                 <a class="text-center" href="index.html">
-                                    <h4>Rosella</h4>
+                                    <h4>Fitheal</h4>
                                 </a>
                                 <?php if (session()->getFlashdata('errors')): ?>
                                     <div class="alert alert-danger">
@@ -75,8 +74,12 @@
                                 echo form_close('');
                                 ?>
                                 <p class="mt-5 login-form__footer">Dont have account? <a
-                                        href="<?= base_url('auth/register') ?>" class="text-primary">Sign Up </a> now
+                                        href="<?= base_url('auth/register') ?>" class="text-primary">Sign Up </a>
+                                    now
                                 </p>
+                                <p class="mt-5 login-form__footer">
+                                    <a href="<?= base_url('auth/forgot_password') ?>" class="text-primary">Forget
+                                        password !!</a>
                                 </p>
                             </div>
                         </div>
@@ -85,7 +88,7 @@
             </div>
         </div>
     </div>
-    </div>
+
 
 
 

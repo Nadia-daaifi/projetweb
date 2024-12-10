@@ -24,13 +24,12 @@
                             <table class="table table-striped table-bordered zero-configuration">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Photo</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone Number</th>
                                         <th>Age</th>
                                         <th>Sexe</th>
-                                        <th>Photo</th>
                                         <th style="width: 10px;">Action</th>
                                     </tr>
                                 </thead>
@@ -39,16 +38,15 @@
                                     <?php if (!empty($clients)): ?>
                                         <?php foreach ($clients as $client): ?>
                                             <tr>
-                                                <td><?= esc($client['id_user']) ?></td>
+                                                <td>
+                                                    <img src="<?= base_url('img/' . $client['photo']) ?>" alt="Photo"
+                                                        width="60">
+                                                </td>
                                                 <td><?= esc($client['username']) ?></td>
                                                 <td><?= esc($client['email']) ?></td>
                                                 <td><?= esc($client['phone_num']) ?></td>
                                                 <td><?= esc($client['age']) ?></td>
                                                 <td><?= esc($client['sexe']) ?></td>
-                                                <td>
-                                                    <img src="<?= base_url('img/' . $client['photo']) ?>" alt="Photo"
-                                                        width="50">
-                                                </td>
                                                 <td style="width: 10px;"><span>
                                                         <a href="<?= base_url('admin/editClient/' . $client['id_user']) ?>"
                                                             data-toggle="tooltip" data-placement="top" title="Edit">

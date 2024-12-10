@@ -169,9 +169,7 @@ class Auth extends BaseController
                 if ($user['type'] === 'admin') {
                     return redirect()->to(base_url('/admin'));
                 } elseif ($user['type'] === 'client') {
-                    return redirect()->to(base_url('/site/acceuil'));
-                } elseif ($user['type'] === 'coach') {
-                    return redirect()->to(base_url('/site/about'));
+                    return redirect()->to(base_url('/fitheal/acceuil'));
                 }
             } else {
                 session()->setFlashdata('error', 'Invalid email or password.');
@@ -506,7 +504,54 @@ class Auth extends BaseController
             return redirect()->back()->withInput();
         }
     }
-
+    public function forgotPassword()
+    {
+        return view('forgot_password');
+    }
+    
+    public function processForgotPassword()
+    {
+        $email = $this->request->getPost('email');
+    
+        // Vérifiez si l'email existe dans la base de données
+        $userModel = new ModelClient();
+        $user = $userModel->where('email', $email)->first();
+    
+        if (!$user) {
+            return redirect()->back()->with('error', 'Email address not found.');
+        }
+    
+        // Générer un mot de passe temporaire
+        $newPassword = bin2hex(random_bytes(4)); // Exemple : un mot de passe temporaire de 8 caractères
+        $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT); // Hachage du mot de passe
+    
+        // Mettre à jour le mot de passe dans la base de données
+        $userModel->update($user['id_user'], ['password' => $hashedPassword]);
+    
+        // Préparer et envoyer l'email
+        $subject = "Your Temporary Password";
+        $message = "Your temporary password is: $newPassword. Please log in and change it immediately.";
+        $this->sendEmail($email, $subject, $message);
+    
+        // Afficher un message de succès
+        return redirect()->back()->with('success','A new temporary password has been sent to your email address.');
+    }
+    
+    private function sendEmail($to, $subject, $message)
+    {
+        // Utiliser la bibliothèque Email de CodeIgniter pour envoyer un email (assurez-vous de configurer l'email dans CodeIgniter)
+        $email = \Config\Services::email();
+    
+        $email->setTo($to);
+        $email->setSubject($subject);
+        $email->setMessage($message);
+        
+        if (!$email->send()) {
+            // Si l'envoi échoue
+            log_message('error', 'Failed to send email to: ' . $to);
+        }
+    }
+    
 
 }
 

@@ -56,12 +56,6 @@
                     </li>
                 </ul>
             </li>
-
-            <li>
-                <a href="<?= base_url('/admin/calender') ?>" aria-expanded="false">
-                    <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Calender</span>
-                </a>
-            </li>
             <li class="<?= (strpos(current_url(), 'absence') !== false) ? 'active' : '' ?>">
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                     <i class="icon-check menu-icon"></i><span class="nav-text">Absence</span>

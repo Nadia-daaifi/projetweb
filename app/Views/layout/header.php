@@ -26,10 +26,10 @@
         <div class="nav-header">
             <div class="brand-logo">
                 <a href="index.html">
-                    <b class="logo-abbr"><img src="<?= base_url() ?>/dash/images/logo.png" alt=""> </b>
-                    <span class="logo-compact"><img src="<?= base_url() ?>/dash/images/logo-compact.png" alt=""></span>
+                    <b class="logo-abbr"><img src="<?= base_url() ?>/img/logo.png" alt=""> </b>
+                    <span class="logo-compact"><img src="<?= base_url() ?>/img/logo2.png" alt=""></span>
                     <span class="brand-title">
-                        <img src="<?= base_url() ?>/dash/images/logo-text.png" alt="">
+                        <img src="<?= base_url() ?>/img/logo2.png" alt="">
                     </span>
                 </a>
             </div>
@@ -52,121 +52,32 @@
 
                 <div class="header-right">
                     <ul class="clearfix">
-                        <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
-                                <i class="mdi mdi-email-outline"></i>
-                                <span class="badge gradient-1 badge-pill badge-primary">3</span>
+                        <li class="icons dropdown">
+                            <a href="javascript:void(0)" data-toggle="dropdown">
+                            <i class="p-1 mdi mdi-email-outline"></i>
+                                <span class="badge gradient-1 badge-pill badge-primary"><?= count($messages) ?></span>
                             </a>
                             <div class="drop-down animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
-                                    <span class="">3 New Messages</span>
-
+                                    <span class=""><?= count($messages) ?> New Messages</span>
                                 </div>
                                 <div class="dropdown-content-body">
                                     <ul>
-                                        <li class="notification-unread">
-                                            <a href="javascript:void()">
-                                                <img class="float-left mr-3 avatar-img"
-                                                    src="<?= base_url() ?>/dash/images/avatar/1.jpg" alt="">
-                                                <div class="notification-content">
-                                                    <div class="notification-heading">Saiful Islam</div>
-                                                    <div class="notification-timestamp">08 Hours ago</div>
-                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...
+                                        <?php foreach ($messages as $message): ?>
+                                            <li class="notification-unread">
+                                                <a href="javascript:void()">
+                                                    <i class="float-left m-2 icon-user"></i>
+                                                    <div class="notification-content">
+                                                        <div class="notification-heading"><?= esc($message['name']) ?></div>
+                                                        <div class="notification-timestamp">
+                                                            <?= esc($message['created_at']) ?></div>
+                                                        <div class="notification-text">
+                                                            <?= esc(substr($message['message'], 0, 50)) ?>...</div>
                                                     </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="notification-unread">
-                                            <a href="javascript:void()">
-                                                <img class="float-left mr-3 avatar-img"
-                                                    src="<?= base_url() ?>/dash/images/avatar/2.jpg" alt="">
-                                                <div class="notification-content">
-                                                    <div class="notification-heading">Adam Smith</div>
-                                                    <div class="notification-timestamp">08 Hours ago</div>
-                                                    <div class="notification-text">Can you do me a favour?</div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <img class="float-left mr-3 avatar-img"
-                                                    src="<?= base_url() ?>/dash/images/avatar/3.jpg" alt="">
-                                                <div class="notification-content">
-                                                    <div class="notification-heading">Barak Obama</div>
-                                                    <div class="notification-timestamp">08 Hours ago</div>
-                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <img class="float-left mr-3 avatar-img"
-                                                    src="<?= base_url() ?>/dash/images/avatar/4.jpg" alt="">
-                                                <div class="notification-content">
-                                                    <div class="notification-heading">Hilari Clinton</div>
-                                                    <div class="notification-timestamp">08 Hours ago</div>
-                                                    <div class="notification-text">Hello</div>
-                                                </div>
-                                            </a>
-                                        </li>
+                                                </a>
+                                            </li>
+                                        <?php endforeach; ?>
                                     </ul>
-
-                                </div>
-                            </div>
-                        </li>
-                        <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
-                                <i class="mdi mdi-bell-outline"></i>
-                                <span class="badge badge-pill gradient-2 badge-primary">3</span>
-                            </a>
-                            <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
-                                <div class="dropdown-content-heading d-flex justify-content-between">
-                                    <span class="">2 New Notifications</span>
-
-                                </div>
-                                <div class="dropdown-content-body">
-                                    <ul>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i
-                                                        class="icon-present"></i></span>
-                                                <div class="notification-content">
-                                                    <h6 class="notification-heading">Events near you</h6>
-                                                    <span class="notification-text">Within next 5 days</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i
-                                                        class="icon-present"></i></span>
-                                                <div class="notification-content">
-                                                    <h6 class="notification-heading">Event Started</h6>
-                                                    <span class="notification-text">One hour ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i
-                                                        class="icon-present"></i></span>
-                                                <div class="notification-content">
-                                                    <h6 class="notification-heading">Event Ended Successfully</h6>
-                                                    <span class="notification-text">One hour ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i
-                                                        class="icon-present"></i></span>
-                                                <div class="notification-content">
-                                                    <h6 class="notification-heading">Events to Join</h6>
-                                                    <span class="notification-text">After two days</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-
                                 </div>
                             </div>
                         </li>

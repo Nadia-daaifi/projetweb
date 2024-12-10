@@ -5,10 +5,12 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/site/acceuil', 'Home::index');
-$routes->get('/site/about', 'Home::about');
-$routes->get('/site/classes', 'Home::classes');
-$routes->get('/site/contact', 'Home::contact');
+$routes->get('/fitheal/acceuil', 'Home::index');
+$routes->get('/fitheal/about', 'Home::about');
+$routes->get('/fitheal/classes', 'Home::classes');
+$routes->get('/fitheal/contact', 'Home::contact');
+$routes->get('/fitheal/profil', 'Home::profil');
+$routes->post('fitheal/store', 'Home::store');
 $routes->get('/admin', 'Admin::index');
 $routes->get('/admin/calender', 'Admin::calender');
 $routes->get('/admin/coach/add', 'Admin::addCoach');
@@ -25,6 +27,12 @@ $routes->get('admin/editClient/(:num)', 'Admin::editClient/$1');
 $routes->get('auth/logout', 'Auth::logout');
 $routes->post('auth/save_register', 'Auth::save_register'); // Route for processing registration
 $routes->post('auth/check_login', 'Auth::check_login');
+// Route pour le formulaire de mot de passe oublié
+$routes->get('auth/forgot_password', 'Auth::forgotPassword');
+
+// Route pour traiter le formulaire de réinitialisation du mot de passe
+$routes->post('auth/process_forgot_password', 'Auth::processForgotPassword');
+
 $routes->post('/addCoach', 'Auth::add_coach');
 $routes->post('admin/updateCoach/(:num)', 'Auth::updateCoach/$1');
 $routes->post('/addClient', 'Auth::add_client');

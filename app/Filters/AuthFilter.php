@@ -34,9 +34,7 @@ class AuthFilter implements FilterInterface
                 case 'admin':
                     return redirect()->to(base_url('/admin'));
                 case 'client':
-                    return redirect()->to(base_url('/site/acceuil'));
-                case 'coach':
-                    return redirect()->to(base_url('/site/about'));
+                    return redirect()->to(base_url('/fitheal/acceuil'));
                 default:
                     return redirect()->to(base_url('/'))->with('error', 'Unauthorized access.');
             }
